@@ -4,7 +4,7 @@
   "description": "Todo Application for a React.js Workshop At Hackathon By the Sea",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",
