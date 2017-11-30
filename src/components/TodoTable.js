@@ -61,7 +61,7 @@ export default class TodoTable extends Component {
         return (
             <div className="container">
             <div className="row">
-                <h1 className="mt-3">Todo Table</h1>
+                <h3 className="mt-3">Todo Table</h3>
             </div>
             <div className="row">
             <table className="table table-striped mt-2">

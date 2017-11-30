@@ -59,7 +59,7 @@ export default class TodoForm extends Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-4">
-                        <h1 id="form-comp-title">Add a Todo</h1>
+                        <h3 id="form-comp-title">Add a Todo</h3>
                     </div>
                 </div>
                 <form id="todo-form" onSubmit={this.handleSubmit.bind(this)}>
