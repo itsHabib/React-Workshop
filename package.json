@@ -1,5 +1,5 @@
 {
-  "name": "react-workshop",
+  "name": "react-workshop-todo",
   "version": "1.0.0",
   "description": "Todo Application for a React.js Workshop At Hackathon By the Sea",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itsHabib/React-Workshop.git"
+    "url": "git+https://github.com/itsHabib/React-Workshop-Todo.git"
   },
   "keywords": [
     "react",
@@ -18,10 +18,11 @@
   "author": "Michael Habib",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/itsHabib/React-Workshop/issues"
+    "url": "https://github.com/itsHabib/React-Workshop-Todo/issues"
   },
-  "homepage": "https://github.com/itsHabib/React-Workshop#readme",
+  "homepage": "https://github.com/itsHabib/React-Workshop-Todo#readme",
   "dependencies": {
+    "jquery": "^3.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

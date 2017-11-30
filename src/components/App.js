@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TodoForm from './TodoForm'
 
 export default class App extends Component {
     constructor() {
@@ -10,7 +11,9 @@ export default class App extends Component {
     }
     render() {
         return (
-            <h1>Todo App!</h1>
+            <div>
+                <TodoForm/>
+            </div>
         )
     }
 }
