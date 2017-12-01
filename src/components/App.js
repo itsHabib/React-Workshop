@@ -8,14 +8,30 @@ export default class App extends Component {
         super()
 
         this.state = {
-
+            mainComponent: 'Form'
         }
+    }
+
+    renderComponent(componentToRender) {
+        switch (componentToRender) {
+            case 'Table':
+                return <TodoTable/>
+                break
+            case 'Form':
+                return <TodoForm/>
+                break
+        }
+    }
+    changeStateFromNav(component) {
+        this.setState({ mainComponent: component })
     }
     render() {
         return (
             <div>
-                <TodoNavbar/>
-                <TodoTable/>
+                <TodoNavbar 
+                    changeStateFromNav={this.changeStateFromNav.bind(this)}
+                />
+                {this.renderComponent(this.state.mainComponent)}
             </div>
         )
     }

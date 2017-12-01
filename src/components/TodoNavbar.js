@@ -14,10 +14,20 @@ export default class TodoNavbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Table</a>
+                                <a className="nav-link" 
+                                    href="#"
+                                    onClick={() => this.props.changeStateFromNav('Table')}
+                                >
+                                    Table
+                                </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Add a Todo</a>
+                                <a className="nav-link" 
+                                    href="#"
+                                    onClick={() => this.props.changeStateFromNav('Form')}
+                                >
+                                    Add a Todo
+                                </a>
                             </li>
                         </ul>
                     </div>
