@@ -1,17 +1,11 @@
 import React, { Component } from 'react'
 
-export default class TodoTable extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <div className="container">
-            <div className="row">
-                <h3 className="mt-3">Todo Table</h3>
-            </div>
-            <div className="row">
+const TodoTable = ({ todos, todoComplete }) => 
+    <div className="container">
+        <div className="row">
+            <h3 className="mt-3">Todo Table</h3>
+        </div>
+        <div className="row">
             <table className="table table-striped mt-2">
                 <thead>
                     <tr>
@@ -22,14 +16,14 @@ export default class TodoTable extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.todos.map((todo, i) =>
+                    {todos.map((todo, i) =>
                         <tr key={i}>
                             <th scope="row">{i + 1}</th>
                             <td>{todo.text}</td>
                             <td>{todo.date}</td>
                             <td>
                                 <button id={i} 
-                                    onClick={this.props.todoComplete} 
+                                    onClick={todoComplete} 
                                     className="btn btn-primary">
                                     Complete
                                 </button>
@@ -38,8 +32,7 @@ export default class TodoTable extends Component {
                     )}
                 </tbody>
             </table>
-            </div>
         </div>
-        )
-    }
-}
+    </div>
+
+module.exports = TodoTable
