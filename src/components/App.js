@@ -8,23 +8,42 @@ export default class App extends Component {
         super()
 
         this.state = {
-            mainComponent: 'Form'
+            mainComponent: 'Form',
+            todos: []
         }
     }
 
     renderComponent(componentToRender) {
         switch (componentToRender) {
             case 'Table':
-                return <TodoTable/>
+                return <TodoTable todos={this.state.todos}
+                                  todoComplete={this.todoComplete.bind(this)}
+                        />
                 break
             case 'Form':
-                return <TodoForm/>
+                return <TodoForm todos={this.state.todos}
+                                 addTodo={this.addTodo.bind(this)}
+                        />
                 break
         }
     }
     changeStateFromNav(component) {
         this.setState({ mainComponent: component })
     }
+
+    addTodo(todo) {
+        let todos = this.state.todos
+        todos.push(todo)
+        this.setState({ todos })
+    }
+
+    todoComplete(event) {
+        let todos = this.state.todos.filter((todo, i) => 
+            i != event.target.id
+        )
+        this.setState({ todos })
+    }
+
     render() {
         return (
             <div>

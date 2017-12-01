@@ -5,9 +5,7 @@ export default class TodoForm extends Component {
         super(props)
 
         this.state = {
-            todos: [],
             text: '',
-            date: ''
         }
     }
 
@@ -17,25 +15,19 @@ export default class TodoForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        let todos = this.state.todos
-        let text = ''
+        let text = this.state.text
         let date = this.createDateString()
-        todos.push({ 
-            text: this.state.text,
-            date
-        })
+        this.props.addTodo({ text, date })
         this.setState({
-            todos,
-            text
+            text: ''
         })
     }
 
     displayTodos() {
-        console.log(`displaying todos: ${JSON.stringify(this.state)}`)
         let todoElements = (
             <ul className="list-group">
-                {this.state.todos.map((todo) => 
-                    <li className="list-group-item">
+                {this.props.todos.map((todo, i) => 
+                    <li key={i} className="list-group-item">
                         <strong>Todo: </strong>{todo.text}<br/>
                         <strong>Date: </strong>{todo.date}
                     </li>
