@@ -4,7 +4,8 @@
   "description": "Todo Application for a React.js Workshop At Hackathon By the Sea",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
