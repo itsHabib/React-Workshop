@@ -1,6 +1,8 @@
 # React-Workshop-Todo
 React Workshop for Hackathon By the Sea
 
+[Workshop Slides](https://docs.google.com/presentation/d/19hyYppjCckPc1lfHjI1-TcOp5nmyZu8kbOihSMW05ng/edit?usp=sharing)
+
 This project assumes you have [NodeJS v6](http://nodejs.org/) or greater installed. You should
 also have [npm v3](https://www.npmjs.com/) or greater installed as well (this comes packaged
 with Node 6). You'll also need a recent version of [git](https://git-scm.com/) installed
